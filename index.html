@@ -1,0 +1,150 @@
+---
+title: Chip Simulator by JackAce.com
+---
+<html>
+    <head>
+        <title>Chip Simulator by JackAce</title>
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/assets/js/chipsimulator.js"></script>
+        {%- if site.google_analytics -%}
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id={{-site.google_analytics-}}"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '{{-site.google_analytics-}}');
+            </script>
+        {%- endif -%}
+    </head>
+    <body>
+
+
+        <table id="chipStackTable">
+            <tr>
+              <td>
+                <h2>
+                  Poker Chip Shuffling Simulator
+                </h2>
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td class="buttonColumn">
+                <input type="button" id="shuffleSameButton" class="shuffleButton" onclick="shuffleChipStacks(false);" value="Shuffle (0 on top)" />
+              </td>
+              <td class="buttonColumn">
+                <input type="button" id="shuffleNewButton" class="shuffleButton" onclick="shuffleChipStacks(true);" value="Shuffle (new on top)" />
+              </td>
+            </tr>
+            <tr class="chipStackRow">
+              <td rowspan="2">
+          
+                <table class="statsDataTable" width="100%">
+                  <thead>
+                    <tr>
+                      <th>
+                        Stack Size
+                      </th>
+                      <th>
+                        Current Shuffle
+                      </th>
+                      <th>
+                        Two Colors?
+                      </th>
+                      <th>
+                        Original Order?
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="stats0">
+                      <td class="stats0">
+                        <span class="chipStackSizeSpan" />
+                      <td class="stats0">
+                        <div class="currentShuffleDiv" />
+                      </td>
+                      <td class="stats0">
+                        <div class="reunifiedDiv" />
+                      </td>
+                      <td class="stats0">
+                        <div class="superUnifiedDiv" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+                <br />
+          
+                <table class="analysisDataTable">
+                  <thead>
+                    <tr>
+                      <th>
+                        Chips<br />per Stack
+                      </th>
+                      <th>
+                        Total<br />Chips
+                      </th>
+                      <th>
+                        Power<br />of 2?
+                      </th>
+                      <th>
+                        New Chip<br />on Top
+                      </th>
+                      <th>
+                        Back to<br />Original?
+                      </th>
+                      <th>
+                        Shuffles for<br />Original
+                      </th>
+                      <th>
+                        Same Chip<br />on Top
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody />
+                </table>
+          
+          
+              </td>
+              <td>
+                &nbsp;
+              </td>
+              <td>
+                <div class="chipStack0" />
+              </td>
+              <td>
+                <div class="chipStack1" />
+              </td>
+            </tr>
+            <tr class="copyRow">
+              <td>
+                &nbsp;
+              </td>
+              <td colspan="2">
+                <br />
+                <p>
+                  Click on the number of poker chips per stack in the table and then one of the Shuffle buttons to begin shuffling them.
+                </p>
+                <p>
+                  The two stacks start out with the top half of the chips being black and the bottom half red.
+                </p>
+                <p>
+                  Shuffle (new) ensures that a new chip is always put on top of the new stack
+                </p>
+                <p>
+                  Shuffle (0 on top) ensures that the same chip is on always top (chip0)
+                </p>
+                <p>
+                  "Super Unified" means that the stack has been reverted to the original stack, with black on top.
+                </p>
+          
+              </td>
+            </tr>
+          </table>
+                  
+          
+    </body> 
+</html>
