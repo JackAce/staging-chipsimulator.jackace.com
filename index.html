@@ -132,15 +132,19 @@ title: Chip Simulator by JackAce.com
                   The two stacks start out with the top half of the chips being black and the bottom half red.
                 </p>
                 <p>
-                  Shuffle (new) ensures that a new chip is always put on top of the new stack
+                  Shuffle (new on top) ensures that a new chip always ends on top of the new stack
                 </p>
                 <p>
-                  Shuffle (0 on top) ensures that the same chip is on always top (chip0)
+                  Shuffle (0 on top) ensures that the same chip is on always top (chip 0). This means that it is never shuffled and neither is the bottom chip. This essentially reverts the shuffle pattern to the chip stack minus 1 with a NEW chip on top.
                 </p>
                 <p>
-                  "Super Unified" means that the stack has been reverted to the original stack, with black on top.
+                  "Original Order" means that the stack has been reverted to the original stack, with black on top.
                 </p>
-          
+                <p>
+                  The "Back to Original?" column is either "Y" or blank (no). It is "Yes" if the chip stacks never become reversed (all reds over all blacks). In
+                  this case, it only reverts back to the original order.
+                </p>
+
               </td>
             </tr>
           </table>
