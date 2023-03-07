@@ -16,6 +16,9 @@ body {
   input {
     font-size: 10px;
   }
+  a {
+    color: #ccc;
+  }
   .chipStackRow {
     vertical-align: top;
     height: 80%;
